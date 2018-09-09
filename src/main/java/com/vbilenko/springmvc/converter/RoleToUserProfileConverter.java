@@ -15,7 +15,7 @@ import com.vbilenko.springmvc.service.UserProfileService;
 @Component
 public class RoleToUserProfileConverter implements Converter<Object, UserProfile>{
 
-	static final Logger logger = LoggerFactory.getLogger(RoleToUserProfileConverter.class);
+	private static final Logger logger = LoggerFactory.getLogger(RoleToUserProfileConverter.class);
 	
 	@Autowired
 	UserProfileService userProfileService;
