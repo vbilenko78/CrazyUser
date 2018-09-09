@@ -45,13 +45,6 @@ public class AppController {
     @Autowired
     MessageSource messageSource;
 
-//	@Autowired
-//	PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
-//
-//	@Autowired
-//	AuthenticationTrustResolver authenticationTrustResolver;
-
-
     /**
      * This method will list all existing users.
      */

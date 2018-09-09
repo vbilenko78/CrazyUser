@@ -18,16 +18,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao dao;
 
-//	@Autowired
-//    private PasswordEncoder passwordEncoder;
-
     public User findById(int id) {
         return dao.findById(id);
     }
 
     public User findBySSO(String sso) {
-        User user = dao.findBySSO(sso);
-        return user;
+        return dao.findBySSO(sso);
     }
 
     public void saveUser(User user) {

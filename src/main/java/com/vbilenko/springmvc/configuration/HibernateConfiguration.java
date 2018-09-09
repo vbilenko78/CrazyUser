@@ -29,7 +29,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[]{"com.vbilenko.springmvc.model"});
+        sessionFactory.setPackagesToScan("com.vbilenko.springmvc.model");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
