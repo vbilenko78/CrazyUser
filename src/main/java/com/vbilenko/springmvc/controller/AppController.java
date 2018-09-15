@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -44,6 +45,7 @@ public class AppController {
 
     @Autowired
     MessageSource messageSource;
+
 
     /**
      * This method will list all existing users.
@@ -74,10 +76,10 @@ public class AppController {
      * saving user in database. It also validates the user input
      */
     @RequestMapping(value = {"/newuser"}, method = RequestMethod.POST)
-    public String saveUser(@Valid User user, BindingResult result,
-                           ModelMap model) {
+    public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
 
         if (result.hasErrors()) {
+            model.addAttribute("allUsers", userService.findAllUsers());
             return "registration";
         }
 
@@ -99,7 +101,6 @@ public class AppController {
 
         model.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " registered successfully");
         model.addAttribute("loggedinuser", getPrincipal());
-        //return "success";
         return "registrationsuccess";
     }
 
@@ -128,13 +129,12 @@ public class AppController {
             return "registration";
         }
 
-		/*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
-		if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
-			FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
-		    result.addError(ssoError);
-			return "registration";
-		}*/
-
+        //Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
+        if (!userService.isUserSSOUnique(user.getId(), user.getSsoId())) {
+            FieldError ssoError = new FieldError("user", "ssoId", messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
+            result.addError(ssoError);
+            return "registration";
+        }
 
         userService.updateUser(user);
 
@@ -180,6 +180,7 @@ public class AppController {
         return "login";
     }
 
+
     /**
      * This method handles logout requests.
      * Toggle the handlers if you are RememberMe functionality is useless in your app.
@@ -208,14 +209,5 @@ public class AppController {
         }
         return userName;
     }
-
-    /**
-     * This method returns true if users is already authenticated [logged-in], else false.
-     */
-//	private boolean isCurrentAuthenticationAnonymous() {
-//	    final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//	    return authenticationTrustResolver.isAnonymous(authentication);
-//	}
-
 
 }
