@@ -8,8 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6166ce39-42f9-4b2c-b3a1-ae5d7ce53871" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vbilenko/springmvc/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vbilenko/springmvc/controller/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CrazyUsers.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CrazyUsers.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrazyUsers/WEB-INF/classes/com/vbilenko/springmvc/controller/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CrazyUsers/WEB-INF/classes/com/vbilenko/springmvc/controller/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vbilenko/springmvc/controller/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vbilenko/springmvc/controller/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +61,7 @@
           <entry key="html" value="15" />
           <entry key="iml" value="1" />
           <entry key="java" value="171" />
-          <entry key="jsp" value="45" />
+          <entry key="jsp" value="46" />
           <entry key="persistent_logins" value="2" />
           <entry key="properties" value="8" />
           <entry key="sql" value="2" />
@@ -72,7 +76,7 @@
           <entry key="HTML" value="15" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="171" />
-          <entry key="JSP" value="45" />
+          <entry key="JSP" value="46" />
           <entry key="Properties" value="8" />
           <entry key="Scratch" value="2" />
           <entry key="ThymeleafExpressions" value="2" />
@@ -82,19 +86,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="5" />
-          <entry key="html" value="2000" />
-          <entry key="java" value="227" />
+          <entry key="html" value="2097" />
+          <entry key="java" value="243" />
           <entry key="jsp" value="24" />
-          <entry key="txt" value="270" />
+          <entry key="txt" value="328" />
           <entry key="xml" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1999" />
-          <entry key="JAVA" value="227" />
+          <entry key="HTML" value="2096" />
+          <entry key="JAVA" value="243" />
           <entry key="JSP" value="24" />
-          <entry key="PLAIN_TEXT" value="270" />
+          <entry key="PLAIN_TEXT" value="328" />
           <entry key="Scratch" value="5" />
           <entry key="ThymeleafExpressions" value="1" />
           <entry key="XML" value="53" />
@@ -117,17 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -135,21 +130,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/vbilenko/springmvc/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+            <state relative-caret-position="339">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#5748#5749#0" expanded="true" />
                 <element signature="e#5799#5800#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -415,10 +401,10 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="customUserDetailsService&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="newUser&#9;null&#9;null&#10;customUserDetailsService&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537041684480" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537053432828" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -523,7 +509,7 @@
       <option name="presentableId" value="Default" />
       <updated>1536438173123</updated>
       <workItem from="1536438174379" duration="42114000" />
-      <workItem from="1536955583889" duration="38169000" />
+      <workItem from="1536955583889" duration="43406000" />
     </task>
     <task id="LOCAL-00001" summary="Configured Database connection in IntelliJ">
       <created>1536441819575</created>
@@ -581,11 +567,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537037124373</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated Roles List on User Registration Form">
+      <created>1537041718616</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537041718616</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79529000" />
+    <option name="totallyTimeSpent" value="84766000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,7 +603,7 @@
       <window_info id="Web" order="7" sideWeight="0.50190115" side_tool="true" weight="0.26466382" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" show_stripe_button="false" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31847134" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31847134" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -677,7 +670,8 @@
     <MESSAGE value="Started to play with Thymeleaf - non-working version." />
     <MESSAGE value="Stack with Thymeleaf POST. Need Ruslan's help." />
     <MESSAGE value="Added some Thymeleaf html page to view folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some Thymeleaf html page to view folder" />
+    <MESSAGE value="Updated Roles List on User Registration Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Roles List on User Registration Form" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1000,13 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -1014,10 +1001,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-852">
+          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/vbilenko/springmvc/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+        <state relative-caret-position="339">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#5748#5749#0" expanded="true" />
             <element signature="e#5799#5800#0" expanded="true" />
@@ -1027,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

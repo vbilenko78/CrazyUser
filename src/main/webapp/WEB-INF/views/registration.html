@@ -15,10 +15,11 @@
 
 <div class="generic-container">
 
-    <div class="well lead">User Registration Form</div>
 
+    <h2 th:text="${edit==true?'Update User':'User Registration'}"></h2>
+    <hr>
 
-    <form th:action="@{registration}" th:object="${roles}" method="POST">
+    <form th:action="${edit==true?'/':'/newuser'}" method="post" th:object="${user}">
         <input type="hidden" name="id" th:field="${user.id}"/>
 
         <div class="row">
@@ -81,14 +82,9 @@
         </div>
 
         <div class="row">
-            <div th:if="${edit}" class="form-actions floatRight">
-                <input type="submit" value="Update" class="btn btn-primary btn-sm"/> or
-                <a th:href="@{/list}">Cancel</a>
-            </div>
-        </div>
-
-        <div th:unless="${edit}" class="form-actions floatRight">
-            <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or
+            <button type="submit" class="btn btn-primary btn-sm" th:text="${edit==true?'Update': 'Create'}">Add User
+            </button>
+            or
             <a th:href="@{/list}">Cancel</a>
         </div>
 
