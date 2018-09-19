@@ -11,24 +11,12 @@
     <link rel="stylesheet" type="text/css"
           href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>
 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Registration Success!</title>
-    </head>
+</head>
 
-<body>
-<div class="generic-container">
-
-    <th:block th:insert="authheader"/>
-
-    <div class="alert alert-success lead">
-        <p>Success!!!</p>
-    </div>
-
-    <span class="well floatRight">
-        Go to<a th:href="@{/list}"> Users List</a>
-		</span>
+<div class="authbar">
+    <span>Welcome to CrazyUsers!</span>
+    <span class="floatRight"><a th:href="@{'/newuser'}">Add New User</a></span>
+    <span class="floatRight"><a th:href="@{'/logout'}">Logout</a></span>
 </div>
-</body>
 </html>
+
