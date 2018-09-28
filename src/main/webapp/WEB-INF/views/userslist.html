@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
@@ -15,7 +13,8 @@
 
 <body>
 
-<th:block th:insert="authheader"/>
+<br>
+<p th:block th:insert="authheader"></p>
 
 <div class="generic-container">
 
@@ -33,13 +32,13 @@
                 <th>Email</th>
                 <th>SSO ID</th>
 
-                <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
+                <div th:if="${#request.isUserInRole('ROLE_DBA') || #request.isUserInRole('ROLE_DBA')}">
                     <th width="100"></th>
-                </sec:authorize>
+                </div>
 
-                <sec:authorize access="hasRole('ADMIN')">
+                <div th:if="${#request.isUserInRole('ROLE_ADMIN')}">
                     <th width="100"></th>
-                </sec:authorize>
+                </div>
 
             </tr>
             </thead>
@@ -54,17 +53,17 @@
                 <td th:text="${user.ssoId}"></td>
 
 
-                <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
+                <div th:if="${#request.isUserInRole('ROLE_DBA') || #request.isUserInRole('ROLE_ADMIN')}">
                     <td><a th:href="@{'/edit-user-'+${user.ssoId}}"
                            class="btn btn-success custom-width">edit</a>
                     </td>
-                </sec:authorize>
+                </div>
 
-                <sec:authorize access="hasRole('ADMIN')">
+                <div th:if="${#request.isUserInRole('ROLE_ADMIN')}">
                     <td><a th:href="@{'/delete-user-'+${user.ssoId}}"
                            class="btn btn-danger custom-width">delete</a>
                     </td>
-                </sec:authorize>
+                </div>
 
             </tr>
 
@@ -73,11 +72,11 @@
         </table>
     </div>
 
-    <sec:authorize access="hasRole('ADMIN')">
+    <div th:if="${#request.isUserInRole('ROLE_ADMIN')}">
         <div class="well">
-            <a th:href="@{'/newuser' }">Add New User</a>
+            <a th:href="@{'/newuser'}">Add New User</a>
         </div>
-    </sec:authorize>
+    </div>
 
 </div>
 

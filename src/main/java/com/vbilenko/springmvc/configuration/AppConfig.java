@@ -2,7 +2,6 @@ package com.vbilenko.springmvc.configuration;
 
 import com.vbilenko.springmvc.converter.RoleToUserProfileConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,7 +16,6 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
-import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 
 @Configuration
@@ -33,7 +31,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     /**
      * Configure Thymeleaf to deliver preferred views.
      */
-
     @Bean
     @Description("Thymeleaf Template Resolver")
     public ITemplateResolver templateResolver() {
