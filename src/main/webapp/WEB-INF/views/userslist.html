@@ -32,12 +32,12 @@
                 <th>Email</th>
                 <th>SSO ID</th>
 
-                <div th:if="${#request.isUserInRole('ROLE_DBA') || #request.isUserInRole('ROLE_DBA')}">
+                <div th:if="${#request.isUserInRole('ROLE_DBA') || #request.isUserInRole('ROLE_ADMIN')}">
                     <th width="100"></th>
                 </div>
 
                 <div th:if="${#request.isUserInRole('ROLE_ADMIN')}">
-                    <th width="100"></th>
+                    <th width="20"></th>
                 </div>
 
             </tr>

@@ -10,7 +10,7 @@ import com.vbilenko.springmvc.model.UserProfile;
 import com.vbilenko.springmvc.service.UserProfileService;
 
 /**
- * A converter class used in views to map id's to actual userProfile objects.
+ * A converter class used in views to map user profile id's to actual userProfile objects.
  */
 @Component
 public class RoleToUserProfileConverter implements Converter<Object, UserProfile> {

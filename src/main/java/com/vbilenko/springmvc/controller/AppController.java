@@ -55,6 +55,7 @@ public class AppController {
      */
     @RequestMapping(value = {"/newuser"}, method = RequestMethod.GET)
     public String newUser(ModelMap model) {
+
         User user = new User();
         model.addAttribute("user", user);
         model.addAttribute("edit", false);
@@ -112,7 +113,6 @@ public class AppController {
             return "registration";
         }
 
-        //Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
         if (!userService.isUserSSOUnique(user.getId(), user.getSsoId())) {
             FieldError ssoError = new FieldError("user", "ssoId", messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
             result.addError(ssoError);
