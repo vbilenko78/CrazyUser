@@ -60,17 +60,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return viewResolver;
     }
 
-
-//    @Override
-//    public void configureViewResolvers(ViewResolverRegistry registry) {
-//
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setViewClass(JstlView.class);
-//        viewResolver.setPrefix("/WEB-INF/views/");
-//        viewResolver.setSuffix(".jsp");
-//        registry.viewResolver(viewResolver);
-//    }
-
     /**
      * Configure ResourceHandlers to serve static resources like CSS/ Javascript etc...
      */

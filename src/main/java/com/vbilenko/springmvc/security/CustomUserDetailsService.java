@@ -22,7 +22,7 @@ import com.vbilenko.springmvc.service.UserService;
 @Service("customUserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {
 
-    static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
+    private static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
 
     @Autowired
     private UserService userService;
@@ -48,7 +48,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         for (UserProfile userProfile : user.getUserProfiles()) {
             authorities.add(new SimpleGrantedAuthority("ROLE_" + userProfile.getType()));
         }
-        logger.info("authorities : {}", authorities);
+        
         return authorities;
     }
 }
